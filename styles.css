@@ -1,0 +1,122 @@
+body {
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #152733;
+  color: #fff;
+  }
+
+#expenses-breakdown{
+  background-color: white;
+  color: #152733;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+
+#total-box{
+  align-items: center;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+  
+  #intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    
+}
+
+
+#form-container {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 60px;
+}
+  
+  
+  h1,
+  h2 {
+    margin: 5px 0;
+    text-align: center;
+    padding: 30px;
+  }
+  h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 30px;
+  }
+  label {
+    font-size: 14px;
+    text-align: center;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  button {
+    background-color: white;
+    color: #191970;
+    padding: 8px 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+
+  }
+  
+  button:hover {
+    background-color: #191970;
+    color: white;
+  }
+  
+
+  .row {
+    padding: 30px 0;
+  }
+
+  #expenses-breakdown, #total-heading, #total-box{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    display: flex;
+    
+  }
+
+  p{
+    margin:0;
+  }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link to Javascript needed for pie chart -->
+    <script src='https://cdn.plot.ly/plotly-2.29.1.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Budget Calculator</title>
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a href="index.html" class="navbar-brand">Budget Calculator</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav">
+                  <a href="index.html" class="nav-item nav-link active">Calculator</a>
+                  <a href="about.html" class="nav-item nav-link">About</a>
+              </div>
+              <div class="navbar-nav ms-auto">
+                  <a href="https://github.com/catherine976" class="nav-item nav-link">Github</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+    <div class="container" >
+      <div class="row" id="intro">
+    
+        <h1>Budget Calculator</h1>
+        <p>Input your income and spending habits and you'll get advice on how to improve your money management.</p>
+        <p> This page has been viewed <a id= "counter"></a> times </p>
+        <div id="form-container">
+        
+        <form>
+          <h3>Income (per month)</h3>
+          <p>
+            <label for="income" class="form-label">Total income:</label>
+            <input id="income" class="form-control" type="number" value=2000>
+          </p>
+          <h3>Essential Spending (per month)</h3>
+          <p>
+            <label for="rent" class="form-label">Rent:</label>
+            <input id="rent" class="form-control" type="number" value=1000>
+          </p>
+          <p>
+            <label for="groceries" class="form-label">Groceries:</label>
+            <input id="groceries" class="form-control" type="number" value=250>
+          </p>
+          <p>
+            <label for="council-tax" class="form-label">
+              Council tax:</label>
+            <input id="council-tax" class="form-control" type="number" value=110>
+          </p>
+          <p>
+            <label for="utilities" class="form-label">
+              Utilities:</label>
+            <input id="utilities" class="form-control" type="number" value=150>
+          </p>
+          <h3>Discretionary Spending (per month)</h3>
+          <p>
+            <label for="online-subs" class="form-label">Online subscriptions:</label>
+            <input id="online-subs" class="form-control" type="number" value=75>
+          </p>
+          <p>
+            <label for="restaurants" class="form-label">Restaurants:</label>
+            <input id="restaurants" class="form-control" type="number" value=250>
+          </p>
+          <p>
+            <label for="leisure" class="form-label">
+              Hobbies and leisure:</label>
+            <input id="leisure" class="form-control" type="number" value=110>
+          </p>
+          <p>
+            <label for="car" class="form-label">
+              Car expenses:</label>
+            <input id="car" class="form-control" type="number" value=150>
+          </p>
+          <h3>Savings and Investments (per month)</h3>
+          <p>
+            <label for="savings" class="form-label">Payments into savings:</label>
+            <input id="savings" class="form-control" type="number" value=100>
+          </p>
+          <p>
+            <label for="investments" class="form-label">Payments into investments:</label>
+            <input id="investments" class="form-control" type="number" value=100>
+          </p>
+          <a href="#advice"><button type="button" id="total-btn">Submit</button></a>
+        </form>
+      </div>
+      </div>
+      <div id="advice-container">
+      <h4 id="tips-heading"></h4>
+      <div class="row display-flex" id ="advice">
+        <!-- HTML structure for the budgeting advice section -->
+        
+        
+        <div class = "col-md-4">
+          <div class = "p-3" id = "income-box">
+          <p id="income-tip"></p>
+        </div>
+        </div>
+        <div class = "col-md-4">
+          <div  class = "p-3" id="essentials-box">
+          <p id="essentials-tips"></p>
+        </div>
+        </div>
+        <div class = "col-md-4">
+          <div class = "p-3" id="savings-box">
+          <p id="savings-tips"></p>
+        </div>
+        </div>
+      </div>
+      </div>
+        <!-- HTML structure for the expenses breakdown section -->
+      <div class="row" id ="expenses-breakdown">
+        <h4 id="total-heading"></h4>
+        <div class = "row h-100" id="total-box">
+          <div class= "col md-4">
+          <p id="essentials-total"></p>
+          <p id="discretionary-total"></p>
+          <p id="savings-total"></p>
+          <p id="entire-total"></p>
+        </div>
+        <div class = "col md-4" id="pieChart">
+        </div>
+      </div>
+      </div>
+      </div>  
+    </div>
+    <script src='script.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
