@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   getVisitCount();
 })
 
-const functionApi = '';
+const functionApi = 'https://getbudgetcalculatorcount.azurewebsites.net/api/getbudgetcounter';
 
 const getVisitCount = () => {
   let count = 30;
